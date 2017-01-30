@@ -1,0 +1,19 @@
+.team h1 {
+  margin: 70px 0 70px;
+  font-weight: bolder;
+}
+
+.team-details h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 50px;
+  &:hover {
+    color: #1F74BA;
+    cursor: pointer;
+  }
+}
+
+.contact {
+  font-size: 30px;
+  margin: 120px 0 120px;
+}

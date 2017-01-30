@@ -1,0 +1,36 @@
+<!-- Your Team code here -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Our Team</title>
+  </head>
+
+  <body>
+
+
+    <div class="team">
+      <h1 class="text-center">OUR TEAM</h1>
+
+      <div class="team-details text-center">
+        <div class="container">
+          <div class="row">
+            <ul class="list-inline text-center col-xs-12">
+              <% ["julie", "richard", "rafael"].each do |member| %>
+                <li>
+                  <%= image_tag "#{member}.jpg", class: "avatar-large img-circle" %>
+                  <h3><%= member.capitalize %></h3>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          </div>
+      </div>
+
+      <div class="contact text-center">
+        <p><%= link_to "  contact@airbnb.com", "mailto:contact@airbnb.com", class: "fa fa-envelope" %></p>
+      </div>
+    </div>
+
+  </body>
+</html>

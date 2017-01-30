@@ -1,10 +1,153 @@
 ---
 title: Le Wagon Middleman boilerplate
 ---
-
+<!--
 <div class="welcome text-center padded">
   <h1>Welcome to Middleman</h1>
   <p class="doc">
     <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
   </p>
 </div>
+ -->
+<html>
+  <head>
+<!--     <meta charset="utf-8">
+    <title>Airbnb home</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ -->    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- Leave those next 4 lines if you care about users using IE8 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Your banner code -->
+    <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+      <div class="banner-content">
+        <h1>WELCOME HOME</h1>
+        <p>Rent unique places to stay from local hosts in 190+ countries.</p>
+        <%= link_to "How it works", "#", class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+
+    <!-- Your features code -->
+    <div class="container">
+      <div class="row">
+        <div class="features text-center">
+          <div class="feature col-xs-12 col-sm-6 col-md-3">
+            <%= image_tag "globe.png" %>
+            <h3>Discover the World</h3>
+            <p>Travel the world without limits</p>
+          </div>
+
+          <div class="feature col-xs-12 col-sm-6 col-md-3">
+            <%= image_tag "dollar.png" %>
+            <h3>Pay online</h3>
+            <p>No more cash issues</p>
+          </div>
+          <div class="feature col-xs-12 col-sm-6 col-md-3">
+            <%= image_tag "beer.png" %>
+            <h3>Meet new people everywhere</h3>
+            <p>Embrace local culture and lifestyle</p>
+          </div>
+
+          <div class="feature col-xs-12 col-sm-6 col-md-3">
+            <%= image_tag "heart.png" %>
+            <h3>Share and Love</h3>
+            <p>Join a wolrdwide community of travellers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your cards code -->
+    <div class="wrapper-grey">
+    <h2 class="title text-center">Your Next Trip</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('images/card-paris.jpg')">
+              <h2>Paris</h2>
+              <div class="card-avatar">
+              <%= image_tag "romain.jpeg", class: "avatar-medium" %>
+              </div>
+              <div class="card-description">
+                <h3>Romain's Home</h3>
+                <p>Charming suburban house</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('images/card-brussels.jpeg')">
+              <h2>Brussels</h2>
+              <div class="card-avatar">
+              <%= image_tag "anne.jpg", class: "avatar-medium" %>
+              </div>
+              <div class="card-description">
+                <h3>Anne's place</h3>
+                <p>Spacious and modern flat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('images/card-london.jpeg')">
+              <h2>London</h2>
+              <div class="card-avatar">
+              <%= image_tag "seb.jpg", class: "avatar-medium" %>
+              </div>
+              <div class="card-description">
+                <h3>Seb's room</h3>
+                <p>Functional room in the city center</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your newsletter code -->
+    <div class="newsletter text-center">
+      <h2>Get news from us</h2>
+      <p>Leave us your mail and get news from us</p>
+      <div class="form-padded">
+        <form action="" class="form-inline">
+          <input type="email" id="your-email" placeholder="bob@gmail.com" class="form-control">
+          <input type="submit" value="Sign In" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+
+    <!-- Your map code -->
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+    var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
+
+    var myOptions = {
+      zoom: 16,
+      center: myLatlng,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
+    };
+
+    var map = new google.maps.Map(document.getElementById('map'), myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: "You are here!"
+    });
+    </script>
+  </body>
+</html>
