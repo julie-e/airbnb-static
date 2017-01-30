@@ -1,0 +1,60 @@
+romain:
+  owner_name: Romain Paillard
+  picture: card-paris.jpg
+  owner_picture: romain.jpeg
+  banner_picture: banner-paris.jpg
+  name: Romain's home
+  summary: Charming house in Montmartre
+  city: Paris, France
+  wifi: true
+  rating: 4.5/5
+anne:
+  owner_name: Anne Dupont
+  picture: card-brussels.jpeg
+  banner_picture: banner-brussels.jpg
+  owner_picture: anne.jpg
+  name: Anne's place
+  summary: Spacious and modern flat
+  city: Brussels, Belgium
+  wifi: true
+  rating: 5/5
+seb:
+  owner_name: Sebastien Saunier
+  picture: card-london.jpeg
+  banner_picture: banner-london.jpg
+  owner_picture: seb.jpg
+  name: Seb's room
+  summary: Nice flat in Piccadilly
+  city: London, UK
+  wifi: false
+  rating: 4/5
+julie:
+  owner_name: Julie Ehrmann
+  picture: card-bergerie.jpg
+  banner_picture: banner-corsica.jpg
+  owner_picture: julie.jpg
+  name: Julie's place
+  summary: Amazing sheep fold
+  city: Corsica, France
+  wifi: false
+  rating: 5/5
+richard:
+  owner_name: Richard P.
+  picture: card-laos.jpg
+  owner_picture: richard.jpg
+  banner_picture: banner-laos.jpg
+  name: Richard's place
+  summary: Wonderful place by the sea
+  city: Laos
+  wifi: false
+  rating: 4.5/5
+rafael:
+  owner_name: Rafael V.
+  picture: card-venezuela.jpg
+  banner_picture: banner-venezuela.jpg
+  owner_picture: rafael.jpg
+  name: Rafael's place
+  summary: Beautiful house
+  city: Venezuela
+  wifi: false
+  rating: 4/5

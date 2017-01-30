@@ -1,10 +1,11 @@
 /* Footer design */
 .wrapper-dark-grey {
-  background-color: #333333;
+  background-color: $gray-dark;
+  bottom: 0;
 }
 
 .footer {
-  color: #A2A2A2;
+  color: $gray-lighter;
   padding: 30px 0 20px 10px;
   li {
     padding: 0 10px 5px 10px;

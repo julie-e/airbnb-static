@@ -13,9 +13,6 @@ title: Le Wagon Middleman boilerplate
   <head>
     <title>Airbnb home</title>
      <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
      <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -81,44 +78,20 @@ title: Le Wagon Middleman boilerplate
     <h2 class="title text-center">Your Next Trip</h2>
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('images/card-paris.jpg')">
-              <h2>Paris</h2>
-              <div class="card-avatar">
-              <%= image_tag "romain.jpeg", class: "avatar-medium" %>
-              </div>
-              <div class="card-description">
-                <h3>Romain's Home</h3>
-                <p>Charming suburban house</p>
-              </div>
+          <% data.flats.each do |owner, flat| %>
+            <div class="col-xs-12 col-sm-4">
+              <% link_to  "flats/#{owner}.html", class: "card-link" do %>
+                <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
+                  <div class="card-category"><%= flat.city %></div>
+                  <div class="card-description">
+                    <h3><%= flat.name %></h3>
+                    <p><%= flat.summary %></p>
+                  </div>
+                  <%= image_tag flat.owner_picture, class:"card-avatar avatar-medium" %>
+                </div>
+              <% end %>
             </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('images/card-brussels.jpeg')">
-              <h2>Brussels</h2>
-              <div class="card-avatar">
-              <%= image_tag "anne.jpg", class: "avatar-medium" %>
-              </div>
-              <div class="card-description">
-                <h3>Anne's place</h3>
-                <p>Spacious and modern flat</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('images/card-london.jpeg')">
-              <h2>London</h2>
-              <div class="card-avatar">
-              <%= image_tag "seb.jpg", class: "avatar-medium" %>
-              </div>
-              <div class="card-description">
-                <h3>Seb's room</h3>
-                <p>Functional room in the city</p>
-              </div>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
