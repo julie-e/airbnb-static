@@ -11,12 +11,12 @@ title: Le Wagon Middleman boilerplate
  -->
 <html>
   <head>
-<!--     <meta charset="utf-8">
     <title>Airbnb home</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
+     <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:300,400,500,700">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
- -->    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+     <link rel="stylesheet" href="css/style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Leave those next 4 lines if you care about users using IE8 -->
@@ -33,7 +33,16 @@ title: Le Wagon Middleman boilerplate
       <div class="banner-content">
         <h1>WELCOME HOME</h1>
         <p>Rent unique places to stay from local hosts in 190+ countries.</p>
-        <%= link_to "How it works", "#", class: "btn btn-primary btn-lg" %>
+        <form action="#" class="form-inline">
+          <input type="text" placeholder="checkin" class="form-control input-lg">
+          <input type="text" placeholder="checkout" class="form-control input-lg">
+          <select class="form-control input-lg">
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+          </select>
+          <input type="submit" value="Search" class="btn btn-primary btn-lg">
+        </form>
       </div>
     </div>
 
@@ -106,7 +115,7 @@ title: Le Wagon Middleman boilerplate
               </div>
               <div class="card-description">
                 <h3>Seb's room</h3>
-                <p>Functional room in the city center</p>
+                <p>Functional room in the city</p>
               </div>
             </div>
           </div>

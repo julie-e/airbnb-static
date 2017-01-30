@@ -2,9 +2,11 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500|Ubuntu:400,100,300");
 $base-font: "Open Sans", "Helvetica", "sans-serif";
 $header-font: "Raleway", "Helvetica", "sans-serif";
+$my-font: "Ubuntu", "sans-serif";
+
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -26,11 +28,11 @@ $base-height: 1.4;
 // Scheme
 $brand-color: #D23333;
 
-$red: #EE5F5B;
-$blue: #469AE0;
+$red: #BC4B51;
+$blue: #2CA6A4;
 $yellow: #FDB631;
 $orange: #E67E22;
-$green: #32B796;
+$green: #3D7068;
 
 // Gray scale
 $gray-darker:  lighten(#000, 13.5%); // #222
